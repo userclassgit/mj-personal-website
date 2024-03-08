@@ -1,6 +1,97 @@
 @charset "utf-8";
 
+:root {
+    --dark-color: rgb(18, 18, 18);
+    --light-color: rgb(236, 236, 236);
+}
+
 .container {
     width: min(100% - 30px, 960px);
     margin-inline: auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ====================================Header==================================== */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: transparent url(../img/header.jpeg) no-repeat center center/cover;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        /* Hi, I'm MJ */
+        h2:first-of-type {
+            font-size: 10rem;
+            font-weight: 500;
+            color: var(--light-color);
+            z-index: 2;
+            line-height: 10rem;
+            text-align: center;
+        }
+        /* I'm a software developer */
+        h2:nth-of-type(2) {
+            font-size: 5rem;
+            font-weight: 200;
+            color: var(--light-color);
+            z-index: 2;
+            text-align: center;
+        }
+    }
+    /* dark transparent filter over the header */
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000000aa;
+        z-index: 1;
+    }
+
+    /* dark grade at the bottom of the header */
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to top, var(--dark-color) 0%, var(--dark-color) 23%, rgba(18, 18, 18, 0) 100%);
+        z-index: 3;
+    }
+
+}
+
+
+/* ====================================Font==================================== */
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
