@@ -134,6 +134,10 @@ header {
         justify-content: space-between;
         margin-top: 3rem;
 
+        a {
+            text-decoration: none;
+        }
+
         .social-button {
             gap: 10px;
             font-size: 2.2rem;
@@ -153,8 +157,6 @@ header {
         }
     }
 }
-
-
 
 /* ====================================Font==================================== */
 .roboto-regular {
