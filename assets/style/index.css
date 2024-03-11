@@ -23,6 +23,18 @@
     display: flex;
 }
 
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.4s ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 /* ====================================Header==================================== */
 
 header {
@@ -35,6 +47,7 @@ header {
         display: flex;
         flex-direction: column;
         gap: 1px;
+        z-index: 3;
         /* Hi, I'm MJ */
         h2:first-of-type {
             font-size: 10rem;
